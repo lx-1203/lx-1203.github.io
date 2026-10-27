@@ -1,0 +1,271 @@
+@import "../../_globalColor";
+
+.media-gallery {
+  color: $textColor;
+}
+
+.media-gallery-subtitle {
+  color: $subTitle;
+  margin-bottom: 2rem;
+}
+
+.media-gallery-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $lightBorder1;
+
+  a {
+    color: $buttonColor;
+    padding: 0.5rem 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+  }
+}
+
+.media-gallery-category {
+  margin-top: 3rem;
+  scroll-margin-top: 110px;
+
+  h2 {
+    margin: 0 0 0.6rem;
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
+
+.media-gallery-category-description {
+  color: $subTitle;
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+}
+
+.media-gallery-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.media-gallery-card {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid $lightBorder1;
+  border-radius: 10px;
+  background: $lightBackground2;
+  box-shadow: 0 10px 30px -15px $lightBoxShadowDark;
+}
+
+.media-gallery-photo-link {
+  display: block;
+  height: 240px;
+  background: $lightBackground3;
+}
+
+.media-gallery-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.media-gallery-photo-contain {
+  object-fit: contain;
+}
+
+.media-gallery-photo-cover {
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.media-gallery-caption {
+  padding: 1.1rem 1.3rem 1.3rem;
+  overflow-wrap: anywhere;
+
+  h3,
+  h4 {
+    color: inherit;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 0.3rem;
+  }
+
+  p {
+    color: $cardSubtitle;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0.4rem 0 0.8rem;
+  }
+}
+
+.media-gallery-hint {
+  color: $cardSubtitle;
+  font-size: 13px;
+}
+
+.media-gallery-video {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  background: #000;
+}
+
+.media-gallery-video-link {
+  display: inline-block;
+  color: $buttonColor;
+  font-size: 14px;
+  line-height: 1.8;
+  text-underline-offset: 3px;
+}
+
+.drawing-timeline {
+  --timeline-indent: 1.7rem;
+}
+
+.drawing-timeline-year {
+  margin-top: 2.5rem;
+  padding-left: var(--timeline-indent);
+  border-left: 2px solid $lightBorder1;
+
+  > h3 {
+    margin: 0 0 1.5rem;
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
+
+.drawing-timeline-entries {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.drawing-timeline-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  gap: 1.4rem;
+  padding-bottom: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: calc(0px - var(--timeline-indent) - 6px);
+    width: 8px;
+    height: 8px;
+    border: 2px solid $lightBackground2;
+    border-radius: 50%;
+    background: $buttonColor;
+  }
+
+  .media-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.drawing-timeline-entry-undated {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.drawing-timeline-date {
+  color: $buttonColor;
+  font-size: 16px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+
+.media-gallery-photo-link:focus-visible,
+.media-gallery-video-link:focus-visible,
+.media-gallery-nav a:focus-visible {
+  outline: 3px solid $buttonHover;
+  outline-offset: 3px;
+}
+
+.media-gallery-dark {
+  color: $textColorDark;
+
+  .media-gallery-card {
+    background: $darkBackground;
+    box-shadow: 0 10px 30px -15px $darkBoxShadow;
+  }
+
+  .media-gallery-subtitle,
+  .media-gallery-category-description,
+  .media-gallery-hint,
+  .media-gallery-caption p {
+    color: $textColorDark;
+    opacity: 0.8;
+  }
+
+  .media-gallery-video-link,
+  .media-gallery-nav a,
+  .drawing-timeline-date {
+    color: $progressBarSpanBG;
+  }
+
+  .drawing-timeline-year {
+    border-left-color: $educationCardBorder;
+  }
+
+  .drawing-timeline-entry::before {
+    border-color: $darkBackground;
+    background: $progressBarSpanBG;
+  }
+}
+
+@media (max-width: 1100px) {
+  .media-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .media-gallery-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .media-gallery-category h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .media-gallery-category-description {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .media-gallery-nav {
+    justify-content: center;
+    gap: 0.4rem 1.3rem;
+  }
+
+  .drawing-timeline {
+    --timeline-indent: 1.1rem;
+  }
+
+  .drawing-timeline-entry,
+  .drawing-timeline-entry .media-gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .drawing-timeline-entry {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .media-gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .media-gallery-video {
+    height: 240px;
+  }
+}
