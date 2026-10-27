@@ -148,9 +148,17 @@ const bigProjects = {
     {
       projectName: "元气立方",
       projectDesc: "负责网站开发。获2026年振兴杯校赛三等奖。",
-      status: "2026 · 校赛三等奖",
-      icon: "fas fa-cubes",
-      footerLink: []
+      status: "2026 · 振兴杯校赛三等奖",
+      image: `${process.env.PUBLIC_URL}/images/liangxiao/yuanqi-cube-award.jpg`,
+      imageAlt:
+        "《元气立方》获南京农业大学第六届振兴杯创新创业大赛三等奖的证书，2026年8月28日",
+      imageRotation: -90,
+      footerLink: [
+        {
+          name: "查看获奖证书原图",
+          url: `${process.env.PUBLIC_URL}/images/liangxiao/yuanqi-cube-award.jpg`
+        }
+      ]
     },
     {
       projectName: "一生麦事",
@@ -230,16 +238,6 @@ const achievementSection = {
       imageAlt:
         "《甜气预报：智慧决策“苹”台领航者》获第十九届挑战杯人工智能专项赛校赛三等奖奖状，2025年6月16日",
       icon: "fas fa-mobile-alt",
-      footerLink: []
-    },
-    {
-      title: "2026年振兴杯 · 校赛三等奖",
-      subtitle: "《元气立方》网站开发。",
-      image: `${process.env.PUBLIC_URL}/images/liangxiao/yuanqi-cube-award.jpg`,
-      imageAlt:
-        "《元气立方》获南京农业大学第六届振兴杯创新创业大赛三等奖的证书，2026年8月28日",
-      imageRotation: -90,
-      icon: "fas fa-cubes",
       footerLink: []
     },
     {

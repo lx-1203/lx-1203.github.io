@@ -51,11 +51,21 @@ export default function StartupProject({
                       你的浏览器不支持视频播放，请通过下方链接打开视频。
                     </video>
                   ) : project.image ? (
-                    <div className="project-image">
+                    <div
+                      className={`project-image${
+                        project.imageRotation === -90
+                          ? " project-image-rotated"
+                          : ""
+                      }`}
+                    >
                       <img
                         src={project.image}
                         alt={project.imageAlt || project.projectName}
-                        className="card-image"
+                        className={`card-image${
+                          project.imageRotation === -90
+                            ? " project-image-rotate-left"
+                            : ""
+                        }`}
                         loading="lazy"
                         decoding="async"
                       ></img>

@@ -94,6 +94,17 @@
   object-fit: contain;
 }
 
+.project-image.project-image-rotated {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+.project-image .project-image-rotate-left {
+  transform: rotate(-90deg);
+}
+
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
