@@ -231,6 +231,38 @@ const achievementSection = {
   subtitle: "开发、创作、竞赛与表达中的阶段成果",
   achievementsCards: [
     {
+      title: "知无界 · 全国二等奖",
+      subtitle:
+        "作为核心成员参与《知无界——基于人工智能的大学生全链路智慧学习平台》，负责项目源码全程开发。团队获2026年中国教育技术协会“AI+教育”创新应用技能大赛全国二等奖。组别：大学生AI创新创业组；赛道：大学生OPC创新创业AI agent。",
+      icon: "fas fa-graduation-cap",
+      footerLink: [
+        {
+          name: "查看全国获奖名单（第13页）",
+          url: "https://cmsfiles.zhongkefu.com.cn/chinaeducation/upload/ueditor/20261109/1794227259110292.pdf#page=13"
+        },
+        {
+          name: "查看校内参赛公示",
+          url: "https://net.njau.edu.cn/info/1039/5818.htm"
+        }
+      ]
+    },
+    {
+      title: "Nova Office · 全国优秀奖",
+      subtitle:
+        "作为核心成员参与 Nova Office，负责项目源码全程开发。团队获2026年中国教育技术协会“AI+教育”创新应用技能大赛全国优秀奖。组别：大学生AI创新创业组；赛道：大学生OPC创新创业AI agent。",
+      icon: "fas fa-file-alt",
+      footerLink: [
+        {
+          name: "查看全国获奖名单（第28页）",
+          url: "https://cmsfiles.zhongkefu.com.cn/chinaeducation/upload/ueditor/20261109/1794227259110292.pdf#page=28"
+        },
+        {
+          name: "查看校内参赛公示",
+          url: "https://net.njau.edu.cn/info/1039/5818.htm"
+        }
+      ]
+    },
+    {
       title: "2025年挑战杯 · 人工智能专项赛校赛三等奖",
       subtitle:
         "《甜气预报：智慧决策“苹”台领航者》，负责微信小程序全栈开发。获奖证书日期：2025.06.16。",
@@ -296,7 +328,7 @@ const achievementSection = {
       ]
     },
     {
-      title: "Tripo 世界黑客松 S1",
+      title: "Tripo 世界黑客松 S1 · 全球 Top 100",
       subtitle: "XR设备开发赛道三等奖。",
       image: `${process.env.PUBLIC_URL}/images/liangxiao/tripo-award.png`,
       imageAlt: "Tripo 世界黑客松 S1 颁奖现场合影",
@@ -326,8 +358,8 @@ const ongoingProjects = {
     {
       projectName: "忆流幻境",
       projectDesc:
-        "大学生物理竞赛国赛参赛中。负责 Unity 引擎的项目全栈开发与模型搭建。",
-      status: "参赛中",
+        "已晋级大学生物理竞赛国赛，正在角逐一、二、三等奖。负责 Unity 引擎的项目全栈开发与模型搭建。",
+      status: "晋级国赛",
       icon: "fas fa-gamepad",
       footerLink: []
     },
